@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {% block style%}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/index_style.css') }}">
+  {% endblock %}
   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="{{ url_for('static', filename='imgs/icon.png') }}" type="image/png" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,10 +14,11 @@
   </style>
 	<meta lang="es">
 	<meta charset="utf-8">
-	<title>{% block title %}{% endblock %}</title>
-	{% block style%}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/index_style.css') }}">
-  {% endblock %}
+	<title>
+    {% block title %}
+      index
+    {% endblock %}
+  </title>
 </head>
 <body>
 	{% with messages = get_flashed_messages(with_categories=true) %}
@@ -41,14 +45,45 @@
   </nav>
 	{% block script %}{% endblock %}
 	{% block content %}{% endblock %}
-  <footer class="site-footer" style="display: block; text-align: center;">
+  <!--<footer class="site-footer" style="display: block; text-align: center;">
     <div class="footer-contact" style="color: #FFFFFF; font-size: 20px; font-family:'Droid Sans Mono',monospace;">  contacto: panik.ztation@gmail.com
-    </div>
+    </div>-->
+    <footer style="background: #000;
+    color: #C6C6C6;
+    opacity: 0.80;
+    width: 100%;
+    font-size: 20px;
+    font-family:'Droid Sans Mono',monospace;
+    text-align: center;
+    text-shadow: 0px 0px 3px #333;
+    position: fixed;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid #FF6677;">
+      contacto: panik.ztation@gmail.com
+    <!--
+element.style {
+}
+footer {
+    background: #000;
+    color: #C6C6C6;
+    opacity: 0.80;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    text-shadow: 0px 0px 3px #333;
+    position: fixed;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid #FF6677;
+}-->
     <!--<div class="footer-contact" style="color: #FFFFFF; font-size: 20px; font:400 30px/0.8 'Great Vibes', Helvetica, sans-serif;">  contacto: panik.ztation@gmail.com
     </div>-->
     <div class="middle">
       <a class="btn" href="https://www.instagram.com/panik.ztation/" target="blank" >
-        <img name="insta-logo" src="{{ url_for('static', filename='imgs/insta logo.png') }}" style="width: 30px; height: 30px">
+        <img name="insta-logo" src="{{ url_for('static', filename='imgs/insta logo 2.png') }}" style="width: 30px; height: 30px">
       </a>
     </div>
   </footer>

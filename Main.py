@@ -11,5 +11,9 @@ def home():
 def order():
 	return render_template('order.html')
 
+@app.route("/product_design/")
+def product_design():
+	return render_template('order.html')
+
 if __name__ == "__main__":
 	app.run(debug=True)

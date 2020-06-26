@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block title %}
+	Panik Ztation
+{% endblock %}
+{% block style%}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/home_style.css') }}">
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block content %}
+<p style="text-align: center; color: white; font-size: 20px; font-family:'Droid Sans Mono',monospace;">Seleccione la camiseta del color que desee</p>
+<!--this beautifull content was taken from https://codepen.io/ongtiffany/pen/PPbPyB-->
+	<div id="gallerywrapper">
+	    <div id="gallery">
+		    <div id="pic1">
+			    <img src="https://www.duracolor.co/components/com_virtuemart/shop_image/product/Camiseta_WOW_Per_5b68c3c8b5ef0.png" height="350" width="500" alt="Image 1">
+			    <a class="previous" href="#pic5" style="color: white;"><h1>&lt;</h1></a>
+			    <a class="next" href="#pic2" style="color: white;"><h1>&gt;</h1></a>
+		    </div>
+		    <div id="pic2">
+			    <img src="https://www.duracolor.co/components/com_virtuemart/shop_image/product/resized/magictoolbox_cache/dd6b6cfc02e1715d9cb0915c3f4a72c2/813/thumb350x350/fbf14b93f4f018c9a4674221fd3b7b09.png" height="350" width="500" alt="Image 2">
+			    <a class="previous" href="#pic1" style="color: white;"><h1>&lt;</h1></a>
+			    <a class="next" href="#pic3" style="color: white;"><h1>&gt;</h1></a>
+		    </div>
+		    <div id="pic3">
+			    <img src="http://assets.stickpng.com/images/580b57fbd9996e24bc43bf78.png" height="350" width="500" alt="Image 3">
+			    <a class="previous" href="#pic2" style="color: white;"><h1>&lt;</h1></a>
+			    <a class="next" href="#pic4" style="color: white;"><h1>&gt;</h1></a>
+		    </div>
+		    <div id="pic4">
+			    <img src="https://unsplash.it/g/500/350" height="350" width="500" alt="Image 4">
+			    <a class="previous" href="#pic3" style="color: white;"><h1>&lt;</h1></a>
+			    <a class="next" href="#pic5" style="color: white;"><h1>&gt;</h1></a>
+		    </div>
+		    <div id="pic5">
+			    <img src="https://unsplash.it/g/500/350?random" height="350" width="500" alt="Image 5">
+			    <a class="previous" href="#pic4" style="color: white;"><h1>&lt;</h1></a>
+			    <a class="next" href="#pic1" style="color: white;"><h1>&gt;</h1></a>
+		    </div>
+	    </div>
+	</div>
+<!--until here-->
+{% endblock %}
